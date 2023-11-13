@@ -1,4 +1,4 @@
-const mailer = require("./nodemailer");
+const mailer = require("nodemailer");
 
 const urlParams = new URLSearchParams(window.location.search);
 console.log(urlParams.get('name'))
