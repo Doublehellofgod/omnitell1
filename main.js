@@ -53,7 +53,7 @@ app.controller('krioaz',['$scope','$http',function ($scope, $http){
     (
         async()=>{
             let wb = XLSX.read(await
-                (await fetch(decodeURI(`/assets/file/Перечень_действующих_КРИОАЗС.xlsx`),{
+                (await fetch(decodeURI(`/assets/file/name.xlsx`),{
                     method: "GET",
                     headers: { "Content-Type": "text/html; charset=UTF-8" },
                 })).
