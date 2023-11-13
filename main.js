@@ -1,4 +1,4 @@
-const mailer = require("nodemailer");
+//const mailer = require("nodemailer");
 
 const urlParams = new URLSearchParams(window.location.search);
 console.log(urlParams.get('name'))
@@ -52,7 +52,7 @@ app.controller('appeal', ['$scope','$http', function ($scope, $http){
             text: `Организация: ${$('#org').val()} \nТелефон: ${$('#selfon').val()} \n Сообщение:\n${$('#text').val()} `
         }
 
-        mailer(message);
+        mailer(message);//nodemailer src
 
     }
 }])

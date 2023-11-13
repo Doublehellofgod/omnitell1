@@ -22,6 +22,7 @@ const mailer = message =>{
         console.log('Email send ', info)
     })
 }
+
 /*const message = {
     from:'angus.windler92@ethereal.email',
     to: 'roma.ostroumov@gmail.com',
@@ -33,4 +34,4 @@ const mailer = message =>{
     text: `Телефон: ${data.selfon} \n Сообщение:\n${data.text} `*!/
 }*/
 //mailer(message)
-module.exports = mailer
+//module.exports = mailer
