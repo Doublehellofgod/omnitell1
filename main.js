@@ -1,3 +1,4 @@
+const mailer = require("./nodemailer");
 
 const urlParams = new URLSearchParams(window.location.search);
 console.log(urlParams.get('name'))
@@ -26,7 +27,7 @@ app.controller('appeal', ['$scope','$http', function ($scope, $http){
     $scope.visible = true;
     $scope.sendMail = function (){
 
-        console.log('$scope.name',$('#name').val())
+        /*console.log('$scope.name',$('#name').val())
         // до конца код выполняется в файле index.js, который посылает к коду на nodemailer.js
         $http({
             method: 'GET',
@@ -41,7 +42,17 @@ app.controller('appeal', ['$scope','$http', function ($scope, $http){
             console.log("Error")
             // called asynchronously if an error occurs
             // or server returns response with an error status.
-        });
+        });*/
+
+        const message = {
+            //charset:'utf-8',
+            from:'oktell@tech.omnitell.ru',
+            to: ' khusainov@spg-trade.com',
+            subject: $('#name').val(),
+            text: `Организация: ${$('#org').val()} \nТелефон: ${$('#selfon').val()} \n Сообщение:\n${$('#text').val()} `
+        }
+
+        mailer(message);
 
     }
 }])
