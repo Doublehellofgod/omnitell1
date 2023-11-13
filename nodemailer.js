@@ -1,22 +1,18 @@
 const nademailer = require('nodemailer')
 
 const transport = nademailer.createTransport({
-    /*host: 'smtp.mail.ru',
-    port: 465,
-    secure:true,
+    host: 'smtp.ethereal.email',
+    port: 587,
     auth: {
-        type: "OAuth2",
-        user: 'roma.ostroumov98@mail.ru',
-        //accessToken: "ya29.Xx_XX0xxxxx-xX0X0XxXXxXxXXXxX0x",
-        //pass: 'ifuckyourmam1000times.'
-        //pass: 'FY2efKKfzpaGgwjiXasB'
-    }*/
-    host:'10.130.0.29',
+        user: 'providenci9@ethereal.email',
+        pass: 'Bcm9tG2M3UeKR4DzBw'
+    }
+    /*host:'10.130.0.29',
     port: 9259,
     //secure:true,
     auth:{
         user:'oktell@tech.omnitell.ru'
-    }
+    }*/
 
 })
 
