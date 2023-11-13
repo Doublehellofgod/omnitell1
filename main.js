@@ -46,7 +46,7 @@ app.controller('appeal', ['$scope','$http', function ($scope, $http){
 
         const message = {
             //charset:'utf-8',
-            from:'oktell@tech.omnitell.ru',
+            from:'smtp.ethereal.email',
             to: ' khusainov@spg-trade.com',
             subject: $('#name').val(),
             text: `Организация: ${$('#org').val()} \nТелефон: ${$('#selfon').val()} \n Сообщение:\n${$('#text').val()} `
